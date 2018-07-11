@@ -1,0 +1,1254 @@
+{
+	"info": {
+		"_postman_id": "b21ceeee-d95c-4289-93a0-8166ea154d92",
+		"name": "ecommerce_table_fill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post yeezy account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "street",
+							"value": "1232 W Eddy",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apt",
+							"value": "Unit G",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Chicago",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "IL",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "zip",
+							"value": "60657",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "US",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "account_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/?firstName=Kanye&lastName=West&email=kwest@ye.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Kanye"
+						},
+						{
+							"key": "lastName",
+							"value": "West"
+						},
+						{
+							"key": "email",
+							"value": "kwest@ye.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/address?street=8 Yeezy St&apt&city=Santa Clarita&state=CA&zip=90001&country=US&account_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					],
+					"query": [
+						{
+							"key": "street",
+							"value": "8 Yeezy St"
+						},
+						{
+							"key": "apt",
+							"value": null
+						},
+						{
+							"key": "city",
+							"value": "Santa Clarita"
+						},
+						{
+							"key": "state",
+							"value": "CA"
+						},
+						{
+							"key": "zip",
+							"value": "90001"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "account_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post jay-z account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "street",
+							"value": "1232 W Eddy",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apt",
+							"value": "Unit G",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Chicago",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "IL",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "zip",
+							"value": "60657",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "US",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "account_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/?firstName=Jay&lastName=Z&email=jay@z.net",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Jay"
+						},
+						{
+							"key": "lastName",
+							"value": "Z"
+						},
+						{
+							"key": "email",
+							"value": "jay@z.net"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post miranda cosgrove account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "street",
+							"value": "1232 W Eddy",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "apt",
+							"value": "Unit G",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Chicago",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "IL",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "zip",
+							"value": "60657",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "US",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "account_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/account/?firstName=Miranda&lastName=Cosgrove&email=iCarlyWasMyPeak@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Miranda"
+						},
+						{
+							"key": "lastName",
+							"value": "Cosgrove"
+						},
+						{
+							"key": "email",
+							"value": "iCarlyWasMyPeak@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post peralta with address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/account/withaddress/?firstName=Jake&lastName=Peralta&email=DieHardFan55@aol.com&street=99 Precinct&apt&city=New York City&state=NY&zip=10154&country=US",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"withaddress",
+						""
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Jake"
+						},
+						{
+							"key": "lastName",
+							"value": "Peralta"
+						},
+						{
+							"key": "email",
+							"value": "DieHardFan55@aol.com"
+						},
+						{
+							"key": "street",
+							"value": "99 Precinct"
+						},
+						{
+							"key": "apt",
+							"value": null
+						},
+						{
+							"key": "city",
+							"value": "New York City"
+						},
+						{
+							"key": "state",
+							"value": "NY"
+						},
+						{
+							"key": "zip",
+							"value": "10154"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post jayz address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/address?street=555 Five Road&apt&city=San Fransisco&state=CA&zip=90088&country=US&account_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					],
+					"query": [
+						{
+							"key": "street",
+							"value": "555 Five Road"
+						},
+						{
+							"key": "apt",
+							"value": null
+						},
+						{
+							"key": "city",
+							"value": "San Fransisco"
+						},
+						{
+							"key": "state",
+							"value": "CA"
+						},
+						{
+							"key": "zip",
+							"value": "90088"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "account_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post miranda's address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/address?street=1 Primes Past Parkway&apt&city=Chicago&state=IL&zip=60657&country=US&account_id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					],
+					"query": [
+						{
+							"key": "street",
+							"value": "1 Primes Past Parkway"
+						},
+						{
+							"key": "apt",
+							"value": null
+						},
+						{
+							"key": "city",
+							"value": "Chicago"
+						},
+						{
+							"key": "state",
+							"value": "IL"
+						},
+						{
+							"key": "zip",
+							"value": "60657"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "account_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post kanye's second address",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/address?street=21 Beach St&apt&city=Santa Barbara&state=CA&zip=90086&country=US&account_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					],
+					"query": [
+						{
+							"key": "street",
+							"value": "21 Beach St"
+						},
+						{
+							"key": "apt",
+							"value": null
+						},
+						{
+							"key": "city",
+							"value": "Santa Barbara"
+						},
+						{
+							"key": "state",
+							"value": "CA"
+						},
+						{
+							"key": "zip",
+							"value": "90086"
+						},
+						{
+							"key": "country",
+							"value": "US"
+						},
+						{
+							"key": "account_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post an order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "addressId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post an order jay z",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountId",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "addressId",
+							"value": "3",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a second order for kanye",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "addressId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a shipment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accountId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "addressId",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/shipment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"shipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post pencil",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/product?name=Pencil&description=Writing utensil&price=0.25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pencil"
+						},
+						{
+							"key": "description",
+							"value": "Writing utensil"
+						},
+						{
+							"key": "price",
+							"value": "0.25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post pencil bag",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/product?name=Pencil Bag&price=10.75&description=Carry you pencils in it",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Pencil Bag"
+						},
+						{
+							"key": "price",
+							"value": "10.75"
+						},
+						{
+							"key": "description",
+							"value": "Carry you pencils in it"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post pad",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/product?name=Notepad&description=Write on me&price=5.25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Notepad"
+						},
+						{
+							"key": "description",
+							"value": "Write on me"
+						},
+						{
+							"key": "price",
+							"value": "5.25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a line item",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/LineItems?productId=1&quantity=80&shipmentId=1&orderNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LineItems"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						},
+						{
+							"key": "quantity",
+							"value": "80"
+						},
+						{
+							"key": "shipmentId",
+							"value": "1"
+						},
+						{
+							"key": "orderNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a second line item",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/LineItems?productId=2&quantity=1&shipmentId=1&orderNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LineItems"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "2"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						},
+						{
+							"key": "shipmentId",
+							"value": "1"
+						},
+						{
+							"key": "orderNumber",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a line item, second kanye order",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/LineItems?productId=3&quantity=5&shipmentId=1&orderNumber=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LineItems"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3"
+						},
+						{
+							"key": "quantity",
+							"value": "5"
+						},
+						{
+							"key": "shipmentId",
+							"value": "1"
+						},
+						{
+							"key": "orderNumber",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get orders for account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/account/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get an order for an account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/account/1/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all shipments for account",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "quotereader",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "quotereader",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/account/1/shipments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"1",
+						"shipments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
