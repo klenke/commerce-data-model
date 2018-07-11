@@ -15,7 +15,7 @@ public class OrderLineItem {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
-    @JsonIgnoreProperties({"name","description","image", "price"})
+    @JsonIgnoreProperties({"description","image", "price"})
     private Product product;
 
     @Column
@@ -39,11 +39,13 @@ public class OrderLineItem {
 
     public OrderLineItem(){}
 
-    public OrderLineItem(Product product, int quantity, Shipment shipment, Order order) {
+    public OrderLineItem(Product product, int quantity, Shipment shipment, Order order, double price, double totalPrice) {
         this.product = product;
         this.quantity = quantity;
         this.shipment = shipment;
         this.order = order;
+        this.price = price;
+        this.totalPrice = totalPrice;
     }
 
     public Long getId() {

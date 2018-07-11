@@ -46,7 +46,7 @@ public class OrderLineItemController {
 
         o.setPrice(o.getPrice() + p.getPrice() * quantity);
 
-        return orderLineItemRepository.save(new OrderLineItem(p, quantity, s, o));
+        return orderLineItemRepository.save(new OrderLineItem(p, quantity, s, o, p.getPrice(), p.getPrice() * quantity));
 
     }
 

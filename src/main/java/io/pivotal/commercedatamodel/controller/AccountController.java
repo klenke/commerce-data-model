@@ -4,8 +4,10 @@ package io.pivotal.commercedatamodel.controller;
 import io.pivotal.commercedatamodel.domain.Account;
 import io.pivotal.commercedatamodel.domain.Address;
 import io.pivotal.commercedatamodel.domain.Order;
+import io.pivotal.commercedatamodel.domain.Shipment;
 import io.pivotal.commercedatamodel.repository.AccountRepository;
 import io.pivotal.commercedatamodel.repository.OrderRepository;
+import io.pivotal.commercedatamodel.repository.ShipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +25,9 @@ public class AccountController {
 
     @Autowired
     private OrderRepository orderRepository;
+
+    @Autowired
+    private ShipmentRepository shipmentRepository;
 
     @PostMapping()
     public Account create(
@@ -88,6 +93,11 @@ public class AccountController {
     @GetMapping("/{id}/orders/{orderNumber}")
     public Order orderDetail(@PathVariable("id") Long id, @PathVariable("orderNumber") Long orderNumber){
         return orderRepository.findByAccountIdAndOrderNumber(id, orderNumber);
+    }
+
+    @GetMapping("/{id}/shipments")
+    public List<Shipment> listShipments(@PathVariable("id") Long id){
+        return shipmentRepository.findByAccountIdOrderByDeliveredAsc(id);
     }
 
     @DeleteMapping("/delete/{id}")

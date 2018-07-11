@@ -34,7 +34,7 @@ public class Address implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "account_id")
-    @JsonIgnoreProperties({"firstName", "lastName", "email", "addresses"})
+    @JsonIgnoreProperties({"lastName", "email", "addresses"})
     private Account account;
 
 
