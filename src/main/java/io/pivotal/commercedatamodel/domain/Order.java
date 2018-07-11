@@ -1,6 +1,8 @@
 package io.pivotal.commercedatamodel.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -11,13 +13,15 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long orderNumber;
+    //private Long id;
 
-    @Column
-    private int orderNumber;
+   // @Column
+   // private int orderNumber;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
+    @JsonIgnoreProperties({"addresses", "firstName", "lastName", "email"})
     private Account account;
 
     @Column
@@ -25,27 +29,26 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "address_id")
+    @JsonIgnoreProperties({"account"})
     private Address address;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "order_number")
     private Set<OrderLineItem> orderLineItems;
 
     @Column
-    private Long price;
+    private double price;
 
     public Order(){}
 
-    public Order(int orderNumber, Account account, Date orderDate, Address address, Set<OrderLineItem> orderLineItems, Long price) {
-        this.orderNumber = orderNumber;
+    public Order(Account account, Date orderDate, Address address) {
         this.account = account;
         this.orderDate = orderDate;
         this.address = address;
-        this.orderLineItems = orderLineItems;
-        this.price = price;
+        this.price = 0.0;
     }
 
-    public Long getId(){
+    /*public Long getId(){
         return id;
     }
 
@@ -58,6 +61,14 @@ public class Order {
     }
 
     public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
+    }*/
+
+    public Long getOrderNumber(){
+        return orderNumber;
+    }
+
+    public void setOrderNumber(Long orderNumber){
         this.orderNumber = orderNumber;
     }
 
@@ -93,11 +104,19 @@ public class Order {
         this.orderLineItems = orderLineItems;
     }
 
-    public Long getPrice() {
+    public double getPrice() {
         return price;
+        /*double p = 0.0;
+        if(this.orderLineItems.isEmpty()){
+            return p;
+        }
+        for (OrderLineItem o: this.orderLineItems) {
+            p += o.getTotalPrice();
+        }
+        return p;*/
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

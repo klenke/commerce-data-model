@@ -27,10 +27,9 @@ public class Product {
 
     public Product(){}
 
-    public Product(String name, String description, byte[] image, double price) {
+    public Product(String name, String description, double price) {
         this.name = name;
         this.description = description;
-        this.image = image;
         this.price = price;
     }
 

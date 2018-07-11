@@ -1,6 +1,8 @@
 package io.pivotal.commercedatamodel.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -15,10 +17,12 @@ public class Shipment {
 
     @ManyToOne
     @JoinColumn(name = "account_id")
+    @JsonIgnoreProperties({"addresses", "firstName", "lastName", "email"})
     private Account account;
 
     @ManyToOne
     @JoinColumn(name = "address_id")
+    @JsonIgnoreProperties({"account"})
     private Address address;
 
     @OneToMany
@@ -33,10 +37,9 @@ public class Shipment {
 
     public Shipment(){}
 
-    public Shipment(Account account, Address address, Set<OrderLineItem> orderLineItems, Date shipped, Date delivered) {
+    public Shipment(Account account, Address address, Date shipped, Date delivered) {
         this.account = account;
         this.address = address;
-        this.orderLineItems = orderLineItems;
         this.shipped = shipped;
         this.delivered = delivered;
     }

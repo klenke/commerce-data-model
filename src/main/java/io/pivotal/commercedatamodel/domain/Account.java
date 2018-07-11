@@ -4,7 +4,7 @@ package io.pivotal.commercedatamodel.domain;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name = "account")
+@Table(name = "accounts")
 @Entity
 public class Account {
     @Id
@@ -26,6 +26,12 @@ public class Account {
 
 
     public Account(){}
+
+    public Account(String firstName, String lastName, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
     public Account(String firstName, String lastName, String email, Set<Address> addresses) {
         this.firstName = firstName;

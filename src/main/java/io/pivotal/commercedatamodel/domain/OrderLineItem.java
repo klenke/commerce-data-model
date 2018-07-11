@@ -1,6 +1,8 @@
 package io.pivotal.commercedatamodel.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Table(name = "order_line_item")
@@ -13,6 +15,7 @@ public class OrderLineItem {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
+    @JsonIgnoreProperties({"name","description","image", "price"})
     private Product product;
 
     @Column
@@ -26,20 +29,21 @@ public class OrderLineItem {
 
     @ManyToOne
     @JoinColumn(name = "shipment_id")
+    @JsonIgnoreProperties({"orderLineItems", "address", "account", "shipped", "delivered"})
     private Shipment shipment;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "order_number")
+    @JsonIgnoreProperties({"account", "orderDate", "address", "orderLineItems", "price"})
     private Order order;
 
     public OrderLineItem(){}
 
-    public OrderLineItem(Product product, int quantity, double price, double totalPrice, Shipment shipment) {
+    public OrderLineItem(Product product, int quantity, Shipment shipment, Order order) {
         this.product = product;
         this.quantity = quantity;
-        this.price = price;
-        this.totalPrice = totalPrice;
         this.shipment = shipment;
+        this.order = order;
     }
 
     public Long getId() {
@@ -67,7 +71,7 @@ public class OrderLineItem {
     }
 
     public double getPrice() {
-        return price;
+        return this.product.getPrice();
     }
 
     public void setPrice(double price) {
@@ -75,7 +79,7 @@ public class OrderLineItem {
     }
 
     public double getTotalPrice() {
-        return totalPrice;
+        return this.product.getPrice() * this.quantity;
     }
 
     public void setTotalPrice(double totalPrice) {

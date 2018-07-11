@@ -1,6 +1,8 @@
 package io.pivotal.commercedatamodel.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -32,6 +34,7 @@ public class Address implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "account_id")
+    @JsonIgnoreProperties({"firstName", "lastName", "email", "addresses"})
     private Account account;
 
 
@@ -44,6 +47,16 @@ public class Address implements Serializable {
         this.state = state;
         this.zip = zip;
         this.country = country;
+    }
+
+    public Address(String street, String apt, String city, String state, String zip, String country, Account account) {
+        this.street = street;
+        this.apt = apt;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.country = country;
+        this.account = account;
     }
 
     public Long getId() {
